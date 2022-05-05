@@ -90,3 +90,121 @@
 #     for a in plik:
 #         print(a)
 
+# 5. (7.pkt) Napisz skrypt, który od użytkownika z konsoli pobiera dwie liczby całkowite a i b.
+# Zadaniem jest wykonanie działania ab i zapisanie wyniku do pliku o nazwie zadanie5.txt.
+# W skrypcie dokonaj sprawdzenia błędów związanych z wczytywanymi wartościami, do tego celu użyj składni try-except.
+
+# # Zad5
+# print("Podaj dwie liczby całkowite: ")
+#
+# try:
+#     a = input("Podaj Liczbę a: ")
+#     b = input("Podaj Liczbę b: ")
+#     a = int(a)
+#     b = int(b)
+#     print(pow(a, b))
+#     plik = open('zad5.txt', 'w+')
+#     plik.writelines(str(pow(a, b)))
+# except ValueError:
+#     print("Podano złe dane.")
+# except TypeError:
+#     print("Poproszę liczby całkowite.")
+
+# 4. (2pkt.) Napisz skrypt, który policzy i wyświetli następujące wyrażenie:
+# 𝜋3+ √𝑙𝑜𝑔264+sin (45)4
+# Wynik zaokrągli do dwóch miejsc po przecinku.
+
+# Zad4
+#
+# import math
+# import sys as system
+#
+# pi = math.tau
+#
+# print(round(pow(pi,3) + (pow(math.log(2,64)+math.sin(45),-4)),2))
+
+# 3. (5pkt.) Napisz skrypt, w którym utworzysz listę z liczbami całkowitymi, a następnie za pomocą python comprehension utwórz nową listę,
+# która będzie zawierała co drugi element z pierwszej listy, na koniec wyświetl obydwie listy.
+#
+# lista = [3, 2, 5, 6, 7, 8, 9, 10]
+# lista2 = []
+# lista2 =[i for i in lista if lista.index(i) %2 !=0 ]
+# print(lista2)
+# lista2 = [(i,j) for i in [1, 2, 3] for j in [4, 5, 6]]
+# print(lista2)
+
+
+# skroty = {"PZU": "Państwowy zakład ubezpieczeń",
+#  "ZUS": "Zaklad ubezpieczeń społecznych",
+#  "PKO": "Państwowa kasa oszczędności"}
+# odwrocone = {}
+# for key,value in skroty.items():
+#  odwrocone[value] = key
+# print(odwrocone)
+# #wersja z python comprehension
+# odwrocone2 = {value: key for key, value in skroty.items()}
+# print(odwrocone2)
+# print(skroty)
+# # licznik = 1
+# for x in lista:
+#     if licznik <= len(lista):
+#         x = lista[licznik]
+#         lista2.append(x)
+#     else:
+#         break
+#     licznik += 2
+#
+# print(lista)
+# print(lista2)
+#
+# lista = [3, 2, 5, 6, 7, 8, 9, 10]
+# licznik = 1
+# lista2 = []
+# while licznik != len(lista):
+#     x = lista[licznik]
+#     lista2.append(x)
+#     licznik += 2
+#
+# print(licznik)
+# print(lista2)
+
+# 1. (6pkt.) Napisz funkcje, która jako argument przyjmuje słownik gdzie klucz i wartość będą dowolnego typu.
+# Funkcja ma za zadanie stworzyć i zwrócić listę, do której trafią tylko kluczę ze słownika, które będą miały wartość jako liczbę całkowitą.
+
+
+# def slownik():
+#     lista = []
+#     slowniki = {'1': '45', '2': '87'}
+#     l = 0
+#     k = len(slowniki.keys())
+#     for x in slowniki:
+#         if l != k:
+#             try:
+#                 lista.append(slowniki.get(x))
+#                 l += 1
+#             except TypeError:
+#                 "to nie jest calkowita"
+#         else:
+#             print(lista)
+#             break
+#
+#
+# print(slownik())
+
+# 1. (6pkt.) Napisz funkcje, która jako argument przyjmuje słownik gdzie klucz i wartość będą dowolnego typu.
+# Funkcja ma za zadanie stworzyć i zwrócić listę, do której trafią tylko kluczę ze słownika, które będą miały wartość jako liczbę całkowitą.
+
+# 3. (5pkt.) Napisz skrypt, w którym utworzysz listę z liczbami całkowitymi, a następnie za pomocą python comprehension utwórz nową listę,
+# która będzie zawierała co drugi element z pierwszej listy, na koniec wyświetl obydwie listy.
+
+# 5. (7.pkt) Napisz skrypt, który od użytkownika z konsoli pobiera dwie liczby całkowite a i b.
+# Zadaniem jest wykonanie działania ab i zapisanie wyniku do pliku o nazwie zadanie5.txt.
+# W skrypcie dokonaj sprawdzenia błędów związanych z wczytywanymi wartościami, do tego celu użyj składni try-except.
+
+def to_lubie(** rzeczy):
+ for cos in rzeczy:
+     print("To jest ")
+     print(cos)
+     print(" co lubie ")
+     print(rzeczy[cos])
+to_lubie(slodycze="czekolada", rozrywka=['gry', 'filmy'])
